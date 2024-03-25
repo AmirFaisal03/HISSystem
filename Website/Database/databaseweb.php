@@ -1,12 +1,12 @@
 <?php
 
-$host = '127.0.0.1';
-$db   = 'fashion_store';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
+$dbUsername = "root";
+$dbPassword = "";
+$dbServer = "";
+$dbName = 'fashion_store';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$dsn = new mysqli($dbServer, $dbUsername,  $dbPassword, $dbName, 4307);
+
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
